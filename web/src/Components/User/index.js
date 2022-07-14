@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import * as S from './style';
 import Exclui from '../../Asssets/Exclui.png'
 
 function User(){
+
     return(
         <S.Container>
         <S.Icon>
@@ -12,6 +13,7 @@ function User(){
             <h3> andre.martins@ccc.ufcg.edu.br </h3>
             <button> <img src={Exclui} alt="Logo"/> </button>
         </S.Data>
+        
     </S.Container>
 
     )

@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import * as S from './style';
 import id from '../../Asssets/id.png'
 import User from '../../Components/User/index'
-import PopUp from "../../Components/PopUp/índex";
 import Vector from '../../Asssets/Vector.png'
+import Modal from "../../Components/Modal";
+
+import { useUserContext } from '../../Hooks/useUserContext'
 
 function Usuario(){
+
+    const {addUser, setAddUser} = useUserContext()
+
+
+    function adicionaUsuario(){
+        setAddUser(true)
+    }
+
     return (
         <S.Container>
             <S.Logo>            
@@ -30,12 +40,12 @@ function Usuario(){
                     <User/>
                 </S.Envolter>
             <S.Frame>
-                    <button>  
+                    <button onClick={e =>{true}}>  
                             <h3> +  Adicionar Usuário </h3> 
                     </button>
             </S.Frame>
             </S.Content>
-            <PopUp/>
+            <Modal/>
         </S.Container>
         
 
