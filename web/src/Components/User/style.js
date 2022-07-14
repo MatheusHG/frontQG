@@ -50,6 +50,7 @@ export const Data = styled.div`
         border: 1px solid #FFFF;
         background-color: #FFFF;
         padding: 19px;
+        cursor: pointer;
     }
 
 
