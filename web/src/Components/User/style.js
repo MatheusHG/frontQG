@@ -6,6 +6,9 @@ import Exclui from '../../Asssets/Exclui.png'
 
 export const Container = styled.div`
 
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+
     width: 220px;
     height: 150px;
     display: flex;
@@ -32,9 +35,9 @@ export const Data = styled.div`
     background-color: #ffff;
 
     h3{
-        font-family: 'Kanit';
+        font-family: 'Kanit', sans-serif;        
         font-style: italic;
-        font-weight: 400;
+        font-weight: bold;
         font-size: 10px;
         line-height: 15px;
         color: #023059;

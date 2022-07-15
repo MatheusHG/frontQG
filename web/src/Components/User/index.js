@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import * as S from './style';
 import Exclui from '../../Asssets/Exclui.png'
 
-function User(){
+function User({Identificador}){
 
     return(
         <S.Container>
@@ -10,7 +10,7 @@ function User(){
 
         </S.Icon>
         <S.Data>
-            <h3> andre.martins@ccc.ufcg.edu.br </h3>
+            <h3> {Identificador.email} </h3>
             <button> <img src={Exclui} alt="Logo"/> </button>
         </S.Data>
         

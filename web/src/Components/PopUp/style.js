@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
+
+
 export const Container = styled.div`
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 
     width: 100%;
     height: 100%;
@@ -30,6 +35,8 @@ export const Section = styled.div`
 `
 
 export const Titulo = styled.div`
+
+    
     width: 260px;
     height: 25px;
     display: flex;
@@ -37,16 +44,20 @@ export const Titulo = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    #nome{
-        width: 147px;
-        height: 25px;
-        font-family: 'Kanit';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 17px;
-        line-height: 25px;
 
-        color: #023059;
+    #nome{
+        h3{
+            width: 147px;
+            height: 25px;
+            font-family: 'Kanit', sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 25px;
+        
+
+            color: #023059;
+        }
     }
 
     #botao{
@@ -83,7 +94,19 @@ export const Email   = styled.div`
         padding-left: 15px;
         padding-top: 12px;
         padding-bottom: 12px;
+
+        ::placeholder {
+            font-family: 'Kanit';
+            font-style: italic;
+            font-weight: 1000;
+            font-size: 11px;
+            line-height: 16px;
+
+
+            color: #023059;
+        }
     }
+
     margin-bottom: 10px;
 
 `
@@ -105,6 +128,17 @@ export const Senha   = styled.div`
         padding-left: 15px;
         padding-top: 12px;
         padding-bottom: 12px;
+
+        ::placeholder {
+            font-family: 'Kanit';
+            font-style: italic;
+            font-weight: 1000;
+            font-size: 11px;
+            line-height: 16px;
+
+
+            color: #023059;
+        }
     }
 
     button{
@@ -127,7 +161,7 @@ export const Botao   = styled.div`
         border-radius: 2px;
         border: none;
 
-        font-family: 'Kanit';
+        font-family: 'Kanit', sans-serif;
         font-style: italic;
         font-weight: 700;
         font-size: 15px;

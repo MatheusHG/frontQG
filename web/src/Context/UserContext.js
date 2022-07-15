@@ -4,7 +4,13 @@ export const UserContext = createContext({})
 
 export function UserProvider(props){
     
-    const [addUser,setAddUser] = (false);
+    const [addUser,setAddUser] = useState(false)
+    const [userData,setUserData] = useState({
+        email : '',
+        senha: ''
+    })
+
+    
 
     return (
         <UserContext.Provider value={{addUser,setAddUser}}>

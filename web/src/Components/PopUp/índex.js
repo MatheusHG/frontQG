@@ -2,7 +2,22 @@ import React from "react";
 import * as S from './style';
 import VectorFechar from '../../Asssets/VectorFechar.png'
 
+import { useUserContext } from '../../Hooks/useUserContext'
+
+
+
+
 function PopUp(){
+
+    const {addUser, setAddUser} = useUserContext(false)
+
+    function adicionaUsuario(e){
+
+        e.preventDefault()
+        setAddUser(!addUser);
+    }
+
+
 
     function mostrarSenha(event){
         event.preventDefault()
@@ -19,10 +34,10 @@ function PopUp(){
             <S.Section>
                 <S.Titulo>
                     <div id="nome">
-                         Adicionar Usuário
+                         <h3> Adicionar Usuário </h3>
                     </div>
                     <div id="botao">
-                        <button> <img src={VectorFechar} alt="Fechar"/> </button>
+                        <button onClick={adicionaUsuario}> <img src={VectorFechar} alt="Fechar"/> </button>
                     </div>
                 </S.Titulo>
                 <S.Form>

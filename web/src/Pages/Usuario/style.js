@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -44,7 +47,7 @@ export const Admin = styled.div`
         border: 1px solid #F20F38;
         border-radius: 5px 5px 0px 0px; 
 
-        font-family: 'Kanit';
+        font-family: 'Kanit', sans-serif;
         font-style: italic;
         font-weight: 700;
         font-size: 15px;
@@ -63,7 +66,7 @@ export const Postos = styled.div`
     display: flex;
     justify-content: center;
 
-    font-family: 'Kanit';
+    font-family: 'Kanit', sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 15px;
@@ -77,7 +80,7 @@ export const Postos = styled.div`
         //background-color: green ;
         width: 350px;
         height: 50px;
-        font-family: 'Kanit';
+        font-family: 'Kanit', sans-serif;
         font-style: italic;
         font-weight: 400;
         font-size: 15px;
@@ -118,7 +121,7 @@ export const Frame = styled.div`
         height: 40px;
         background: #F20F38;
         border-radius: 2px;
-        font-family: 'Kanit';
+        font-family: 'Kanit', sans-serif;
         font-style: italic;
         font-weight: 700;
         font-size: 11px;
