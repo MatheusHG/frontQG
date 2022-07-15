@@ -9,7 +9,7 @@ const Rotas = ()=>{
 
         <BrowserRouter>
             <Routes>
-                <Route path="/user" caseSensitive={false} element={<Usuario />} /> 
+                <Route path="/" caseSensitive={false} element={<Usuario />} /> 
             </Routes>
         </BrowserRouter>
     )

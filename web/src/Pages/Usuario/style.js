@@ -61,9 +61,6 @@ export const Admin = styled.div`
 
         cursor: pointer;
 
-        &.user{
-            background-color: #F20F38;
-        }
     }
 `
 
