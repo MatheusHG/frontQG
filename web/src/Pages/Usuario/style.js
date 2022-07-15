@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
 
     @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
@@ -28,8 +29,11 @@ export const Logo = styled.div`
 export const Tabs = styled.div`
     display: flex;
     flex-direction: row;
-    width: 700px;
+    justify-content: center;
+    width: 1280px;
     height: 50px;
+    border-bottom: 2px solid #F20F38;
+
 
 `
 
@@ -56,6 +60,10 @@ export const Admin = styled.div`
         color: #FEFEFE;
 
         cursor: pointer;
+
+        &.user{
+            background-color: #F20F38;
+        }
     }
 `
 

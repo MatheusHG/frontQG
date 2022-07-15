@@ -1,42 +1,24 @@
 import React, {useState} from "react";
 import * as S from './style';
 import id from '../../Asssets/id.png'
-import User from '../../Components/User/index'
-import PopUp from "../../Components/PopUp/índex";
 
+import Postos from "../../Components/Postos";
 
-import { useUserContext } from '../../Hooks/useUserContext'
+import UserNavigate from "../../Components/UserNavigate";
 
 function Usuario(){
 
-    const {addUser, setAddUser} = useUserContext(false)
+    const [main,setMain] = useState('user')
 
-
-    function adicionaUsuario(e){
-
+    function getUser(e){
         e.preventDefault()
-        setAddUser(!addUser);
+        setMain('user')   
     }
-
-    var array = [
-        {email : 'andre.martins@ccc.ufcg.edu.br'},
-        {email : 'jose.arthur.brito@ccc.ufcg.edu.br'},
-        {email : 'vitinho@ccc.ufcg.edu.br'},
-        {email : 'davyson@ccc.ufcg.edu.br'},
-        {email : 'kleber@ccc.ufcg.edu.br'},
-        {email : 'jonatas@ccc.ufcg.edu.br'},
-        
-    ]
-
-    function listarUsers(a){
-        return(
-            a.map((element,index)=>{
-                return <User Identificador = {element} key = {'user-'+index}/>
-            })
-        )
-    }
-
     
+    function getPosto(e){
+        e.preventDefault()
+        setMain('posto') 
+    }
 
     return (
         <S.Container>
@@ -45,27 +27,13 @@ function Usuario(){
             </S.Logo>
             <S.Tabs>
                 <S.Admin>
-                    <button> Usuários Admin </button>
+                    <button onClick={getUser}> Usuários Admin </button>
                 </S.Admin>
                 <S.Postos>
-                    <button> Postos </button>
+                    <button onClick={getPosto}> Postos </button>
                 </S.Postos>
             </S.Tabs>
-            <S.Content>
-                <S.Envolter>
-                    {
-                        listarUsers(array)
-                    }
-                </S.Envolter>
-            <S.Frame>
-                    <button onClick={adicionaUsuario}>  
-                            <h3> +  Adicionar Usuário </h3> 
-                    </button>
-            </S.Frame>
-            </S.Content>
-            <div>
-                {addUser ? <PopUp/> : <div/> }
-            </div>
+            {main === 'user' ? <UserNavigate/> : <Postos/>}
         </S.Container>
         
 
