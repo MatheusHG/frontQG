@@ -5,20 +5,11 @@ import id from '../../Asssets/id.png'
 import Postos from "../../Components/Postos";
 
 import UserNavigate from "../../Components/UserNavigate";
+import { useEffect } from "react";
 
 function Usuario(){
 
-    const [main,setMain] = useState('user')
-
-    function getUser(e){
-        e.preventDefault()
-        setMain('user')   
-    }
-    
-    function getPosto(e){
-        e.preventDefault()
-        setMain('posto') 
-    }
+    const [active, setActive] = useState(true)
 
     return (
         <S.Container>
@@ -26,14 +17,10 @@ function Usuario(){
                 <img src={id} alt="Logo"/>
             </S.Logo>
             <S.Tabs>
-                <S.Admin>
-                    <button onClick={getUser}> Usuários Admin </button>
-                </S.Admin>
-                <S.Postos>
-                    <button onClick={getPosto}> Postos </button>
-                </S.Postos>
+                <S.Admin onClick={() => setActive(true)} admin={active}> Usuários Admin </S.Admin>
+                <S.Postos onClick={() => setActive(false)} admin={active}> Postos </S.Postos>
             </S.Tabs>
-            {main === 'user' ? <UserNavigate/> : <Postos/>}
+            {active ? <UserNavigate/> : <Postos/>}
         </S.Container>
         
 

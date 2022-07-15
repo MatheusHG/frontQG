@@ -37,65 +37,31 @@ export const Tabs = styled.div`
 
 `
 
-
-export const Admin = styled.div`
+const EsqueletoButton = styled.button.attrs(({admin})=>({
+    admin,
+}))`
     width: 350px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-
-    button{
-        width: 350px;
-        height: 50px; 
-        background: #F20F38;
-        border: 1px solid #F20F38;
-        border-radius: 5px 5px 0px 0px; 
-
-        font-family: 'Kanit', sans-serif;
-        font-style: italic;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 22px;
-
-        color: #FEFEFE;
-
-        cursor: pointer;
-
-    }
-`
-
-
-export const Postos = styled.div`
-    width: 350px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid #F20F38;
     font-family: 'Kanit', sans-serif;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 15px;
     line-height: 22px;
 
-    color: #F20F38;
-    
-    button{
-        border: 1px solid #FFFF;
-        background-color: #FFFF;
-        //background-color: green ;
-        width: 350px;
-        height: 50px;
-        font-family: 'Kanit', sans-serif;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 22px;
+    cursor: pointer;
+`;
 
-        color: #F20F38;
+export const Admin = styled(EsqueletoButton)`
+    background-color: ${({ admin }) => admin ? '#F20F38' : '#FEFEFE'};
+    color: ${({ admin }) => admin ? '#FEFEFE' : '#F20F38'};
+`
 
-        cursor: pointer;
-    }
 
+export const Postos = styled(EsqueletoButton)`
+    background-color: ${({ admin }) => !admin ? '#F20F38' : '#FEFEFE'};
+    color: ${({ admin }) => !admin ? '#FEFEFE' : '#F20F38'};
 `
 
 export const Content = styled.div`
@@ -108,7 +74,6 @@ export const Content = styled.div`
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
-
 `
 
 export const Frame = styled.div`
